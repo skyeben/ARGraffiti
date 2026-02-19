@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<body>
 
 <script src="config.js"></script>
 <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
-</head>
+<a-scene embedded arjs renderer="logarithmicDepthBuffer: true">
 
-<body>
+    <a-marker preset="hiro">
+        <a-entity
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          gltf-model="">
+        </a-entity>
 
-    
+        <a-light type="ambient"  intensity="0.5"></a-light>
+        <a-light type="directional" intensity="1" position="1 2 1"></a-light>
+        <a-light type="directional" intensity="0.3" position="-1 1 1"></a-light>
+
+    </a-marker>
+
+    <a-entity camera></a-entity>
+
+</a-scene>
 </body>
 </html>
